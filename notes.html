@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notemycode - Programming Notes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><span class="highlight">Note</span>My<span class="highlight">Code</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="notes.html" class="active">Notes</a></li>
+                
+                <li><a href="pyq.html">PYQ</a></li>
+            </ul>
+        </nav>
+        <div class="theme-toggle">
+            <input type="checkbox" id="darkmode-toggle">
+            <label for="darkmode-toggle">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <section class="notes-hero">
+            <h1>Programming Notes</h1>
+            <p>Select a programming language to view detailed notes</p>
+        </section>
+
+        <section class="notes-grid">
+            <div class="notes-card" onclick="window.location.href='pages/c.html'">
+                <div class="card-icon">
+                    <i class="fas fa-c"></i>
+                </div>
+                <div class="card-content">
+                    <h3>C Programming</h3>
+                    <p>Fundamentals of C programming language - syntax, pointers, memory management, and more.</p>
+                    <div class="card-tags">
+                        <span>Beginner</span>
+                        <span>System</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="notes-card" onclick="window.location.href='pages/python.html'">
+                <div class="card-icon">
+                    <i class="fab fa-python"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Python</h3>
+                    <p>Python programming concepts, libraries, data structures, and best practices.</p>
+                    <div class="card-tags">
+                        <span>All Levels</span>
+                        <span>General</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="notes-card" onclick="window.location.href='pages/java.html'">
+                <div class="card-icon">
+                    <i class="fab fa-java"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Java</h3>
+                    <p>Object-oriented programming with Java - classes, inheritance, polymorphism, and more.</p>
+                    <div class="card-tags">
+                        <span>Intermediate</span>
+                        <span>OOP</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="notes-card" onclick="window.location.href='pages/html.html'">
+                <div class="card-icon">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <div class="card-content">
+                    <h3>HTML</h3>
+                    <p>HTML5 elements, structure, semantic markup, and web document creation.</p>
+                    <div class="card-tags">
+                        <span>Beginner</span>
+                        <span>Web</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="notes-card" onclick="window.location.href='pages/css.html'">
+                <div class="card-icon">
+                    <i class="fab fa-css3-alt"></i>
+                </div>
+                <div class="card-content">
+                    <h3>CSS</h3>
+                    <p>CSS3 styling techniques, flexbox, grid, animations, and responsive design.</p>
+                    <div class="card-tags">
+                        <span>Intermediate</span>
+                        <span>Web</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="notes-card" onclick="window.location.href='pages/dsa.html'">
+                <div class="card-icon">
+                    <i class="fas fa-sitemap"></i>
+                </div>
+                <div class="card-content">
+                    <h3>DSA</h3>
+                    <p>Data Structures and Algorithms - arrays, linked lists, trees, sorting, searching, and more.</p>
+                    <div class="card-tags">
+                        <span>Advanced</span>
+                        <span>Theory</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 All Rights Reserved | Built by Krishna Choudhary & Ashwin Patil | krishnachoudhary9424@gmail.com</p>
+    </footer>
+
+    <script src="js/darkmode.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

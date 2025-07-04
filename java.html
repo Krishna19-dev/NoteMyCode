@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notemycode - [LANGUAGE_NAME] Notes</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><span class="highlight">Note</span>My<span class="highlight">Code</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../notes.html" class="active">Notes</a></li>
+                <li><a href="../pyq.html">PYQ</a></li>
+            </ul>
+        </nav>
+        <div class="theme-toggle">
+            <input type="checkbox" id="darkmode-toggle">
+            <label for="darkmode-toggle">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <div class="notes-container">
+            <div class="notes-header">
+                <div class="language-icon">
+                    <i class="fab fa-[LANGUAGE_ICON]"></i>
+                </div>
+                <h1>Java Programming</h1>
+                <p>Comprehensive notes on Java programming language</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>Introduction to Java</h2>
+                <p>Java is a high-level, object-oriented programming language developed by James Gosling at Sun Microsystems and released in 1995. It is designed to be platform-independent through the concept of "Write Once, Run Anywhere" (WORA), thanks to the Java Virtual Machine (JVM), which allows Java code to run on any device that has the JVM installed.</p>
+                <p>Java is a compiled and strongly typed language, meaning code must be compiled before execution and variable types are strictly defined. It is widely used in enterprise applications, Android development, desktop GUIs, and backend systems.</p>
+                <p>Java's syntax is influenced by C/C++, but with a simpler object model and fewer low-level facilities. It supports features like automatic garbage collection, multithreading, and security.</p>
+                <p>Java is known for being robust, secure, and portable, making it a preferred choice for large-scale applications. It also supports object-oriented principles like encapsulation, inheritance, abstraction, and polymorphism.</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>Java Basics</h2>
+                <p>Java syntax is clean and resembles C/C++ but is more object-oriented. A basic Java program must be written inside a class, and execution starts from the main() method.</p>
+                
+                <div class="code-block">
+                    <pre>
+// This is a comment in Java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!"); // Prints a string
+    }
+}
+
+                    </pre>
+                </div>
+                 <h3>Variables and Data Types</h3>
+                <div class="code-block">
+                    <pre>
+String name = "John";      // String
+int age = 30;              // Integer
+double height = 5.9;       // Floating-point number
+boolean isStudent = true;  // Boolean
+
+
+                    </pre>
+                </div>
+                 <h3>Arrays</h3>
+                <div class="code-block">
+                    <pre>
+int[] numbers = {1, 2, 3, 4, 5};
+String[] fruits = {"apple", "banana", "cherry"};
+
+
+                    </pre>
+                </div>
+                 </div>
+                 <h3>Conditional Statements</h3>
+                <div class="code-block">
+                    <pre>
+if (age > 18) {
+    System.out.println("Adult");
+} else if (age > 12) {
+    System.out.println("Teenager");
+} else {
+    System.out.println("Child");
+}
+
+
+                    </pre>
+                </div>
+                
+                 <h3>Loops</h3>
+                <div class="code-block">
+                    <pre>
+// For loop
+for (String fruit : fruits) {
+    System.out.println(fruit);
+}
+
+// While loop
+int counter = 0;
+while (counter < 5) {
+    System.out.println(counter);
+    counter++;
+}
+
+
+
+                    </pre>
+                </div>
+                    
+                 <h3>Methods (Functions)</h3>
+                <div class="code-block">
+                    <pre>
+public static String greet(String name) {
+    return "Hello, " + name + "!";
+}
+
+public static void main(String[] args) {
+    String message = greet("Java learner");
+    System.out.println(message);
+}
+
+                    </pre>
+                </div>
+                
+                <p>Java uses curly braces {} to define the scope of blocks, unlike Python's indentation-based structure.</p>
+            
+
+            <div class="notes-section">
+                <h2>Object-Oriented Programming in Java</h2>
+                <p>Java is fully object-oriented (except for primitive types). Everything in Java revolves around classes and objects.</p>
+                <h3>Defining a Class</h3>
+                <div class="code-block">
+                    <pre>
+public class Dog {
+    // Class variable
+    static String species = "Canis familiaris";
+
+    // Instance variables
+    String name;
+    int age;
+
+    // Constructor
+    public Dog(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Method
+    public String description() {
+        return name + " is " + age + " years old";
+    }
+
+    public String speak(String sound) {
+        return name + " says " + sound;
+    }
+}
+
+                    </pre>
+                </div>
+                    <h3>Creating Objects</h3>
+                <div class="code-block">
+                    <pre>
+public class Main {
+    public static void main(String[] args) {
+        Dog buddy = new Dog("Buddy", 9);
+        Dog miles = new Dog("Miles", 4);
+
+        System.out.println(buddy.description());
+        System.out.println(miles.speak("Woof"));
+    }
+}
+                    </pre>
+                </div>
+                     <h3>Inheritance</h3>
+                <div class="code-block">
+                    <pre>
+public class JackRussellTerrier extends Dog {
+    public JackRussellTerrier(String name, int age) {
+        super(name, age);
+    }
+
+    @Override
+    public String speak(String sound) {
+        return super.speak("Arf");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        JackRussellTerrier jack = new JackRussellTerrier("Jack", 3);
+        System.out.println(jack.description());
+        System.out.println(jack.speak("Woof"));
+    }
+}
+
+
+                    </pre>
+                </div>
+                
+            <div class="notes-section">
+                <h3>Java supports all major OOP principles:</h3>
+                <p>Encapsulation – Hiding internal data using private fields and providing access using getters/setters.</p>
+                <p>Inheritance – Extending a class using extends.</p>
+                <p>Polymorphism – Method overloading and overriding.</p>
+                <p>Abstraction – Using abstract classes or interfaces to hide complex implementation.</p>
+            </div>
+
+
+            <div class="notes-section">
+                <h2>Java Libraries and Frameworks</h2>
+                <p>Java’s ecosystem is vast and supports development in many domains:</p>
+                
+                <h3>Web Development</h3>
+                <p>Spring Boot: A popular framework for building REST APIs and microservices.</p>
+                <p>Hibernate: An ORM framework for database interactions.</p>
+                <p>JavaServer Faces (JSF): A framework for building component-based user interfaces.</p>
+
+                <h3>Mobile Development</h3>
+                <p>Android SDK: The official development kit for Android applications.</p>  
+                
+                <h3>Desktop Applications</h3>
+                <p>JavaFX: A modern framework for building rich desktop applications.</p>
+                <p>Swing: An older framework for building GUI applications.</p>
+
+                <h3>Game Development</h3>
+                <p>LibGDX: A popular framework for game development in Java.</p>
+                <p>jMonkeyEngine: A game engine for 3D game development.</p>
+
+                <h3>Data Science and Machine Learning</h3>
+                <p>Weka: A collection of machine learning algorithms for data mining tasks.</p>
+                <p>Apache Spark: A powerful framework for big data processing and analytics.</p>
+                <p>Java-ML: A library for machine learning in Java.</p>
+
+                <h3>Testing</h3>
+                <p>JUnit: A widely used testing framework for Java applications.</p>    
+                <p>Mockito: A framework for creating mock objects in unit tests.</p>
+                <p>TestNG: A testing framework inspired by JUnit but with more powerful features.</p>
+                <p>Java has a rich ecosystem of libraries and frameworks that extend its functionality for various applications, making it versatile for web development, mobile applications, data science, and more.</p>
+                <p>Java libraries and frameworks are essential for building robust applications efficiently. They provide pre-built functionalities, reducing development time and effort.</p>
+                <p>Some popular Java libraries and frameworks include:</p>
+                <ul>
+                    <li><code>Spring</code>: A powerful framework for building enterprise applications.</li>
+                    <li><code>Hibernate</code>: An ORM framework for database interactions.</li>
+                    <li><code>Apache Commons</code>: A collection of reusable Java components.</li>
+                    <li><code>JUnit</code>: A widely used testing framework for unit testing.</li>
+                    <li><code>Maven</code>: A build automation tool for managing project dependencies.</li>
+                    <li><code>Log4j</code>: A logging utility for Java applications.</li>
+                <ul>
+                    
+                
+                <p>Java is a mature, stable, and high-performance language. Its strong community, massive library ecosystem, and platform independence make it ideal for everything from enterprise-grade applications to mobile apps, web development, and embedded systems.</p>
+                Whether you're building desktop tools or server-side systems, learning Java gives you the tools to build scalable, maintainable, and robust applications across platforms.
+            </div>
+
+            <div class="downloads-section">
+                <h2>Downloadable Resources</h2>
+                <div class="downloads-list">
+                    <div class="download-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <a href="../assets/pdfs/[PDF_FILENAME_1]" download>[PDF_TITLE_1]</a>
+                    </div>
+                    <div class="download-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <a href="../assets/pdfs/[PDF_FILENAME_2]" download>[PDF_TITLE_2]</a>
+                    </div>
+                    <div class="download-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <a href="../assets/pdfs/[PDF_FILENAME_3]" download>[PDF_TITLE_3]</a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="../notes.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Notes
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 All Rights Reserved | Built by Krishna Choudhary & Ashwin Patil| krishnachoudhary9424@gmail.com</p>
+    </footer>
+
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

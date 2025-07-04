@@ -1,0 +1,368 @@
+/* PYQ Page Specific Styles */
+
+/* PYQ Container */
+.pyq-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* PYQ Header */
+.pyq-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.pyq-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.pyq-header p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Years Container */
+.years-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* Year Section */
+.year-section {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 16px var(--shadow-color);
+    transition: all var(--transition-speed);
+}
+
+.year-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px var(--shadow-color);
+}
+
+/* Year Header */
+.year-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.year-header h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+}
+
+.year-header h2 i {
+    color: var(--accent-color);
+    font-size: 1.8rem;
+}
+
+/* Papers Grid */
+.papers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+/* Paper Card */
+.paper-card {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.paper-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    opacity: 0;
+    transition: opacity var(--transition-speed);
+    z-index: -1;
+}
+
+.paper-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 32px var(--shadow-color);
+    border-color: var(--primary-color);
+}
+
+.paper-card:hover::before {
+    opacity: 0.05;
+}
+
+.paper-card:active {
+    transform: translateY(-4px) scale(1.01);
+}
+
+/* Paper Icon */
+.paper-icon {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
+    transition: all var(--transition-speed);
+}
+
+.paper-card:hover .paper-icon {
+    transform: rotate(5deg) scale(1.1);
+    box-shadow: 0 8px 20px rgba(67, 97, 238, 0.4);
+}
+
+/* Paper Content */
+.paper-content {
+    flex: 1;
+}
+
+.paper-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.paper-content p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+/* Download Button */
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all var(--transition-speed);
+    box-shadow: 0 2px 8px rgba(67, 97, 238, 0.3);
+}
+
+.paper-card:hover .download-btn {
+    background-color: var(--secondary-color);
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(67, 97, 238, 0.4);
+}
+
+.download-btn i {
+    font-size: 0.9rem;
+    transition: transform var(--transition-speed);
+}
+
+.paper-card:hover .download-btn i {
+    transform: translateY(-2px);
+}
+
+/* Back to Top */
+.back-to-top {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.back-to-top .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 2px solid var(--border-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all var(--transition-speed);
+}
+
+.back-to-top .btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Loading Animation */
+.paper-card.downloading {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.paper-card.downloading .download-btn {
+    background-color: var(--text-light);
+}
+
+.paper-card.downloading .download-btn i {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pyq-container {
+        padding: 1.5rem;
+    }
+    
+    .pyq-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .pyq-header p {
+        font-size: 1rem;
+    }
+    
+    .year-section {
+        padding: 1.5rem;
+    }
+    
+    .year-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .papers-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .paper-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+    
+    .paper-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pyq-container {
+        padding: 1rem;
+    }
+    
+    .pyq-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .year-section {
+        padding: 1rem;
+    }
+    
+    .year-header h2 {
+        font-size: 1.4rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .paper-card {
+        padding: 1rem;
+    }
+    
+    .paper-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .download-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Dark Mode Enhancements */
+body.dark-mode .paper-card {
+    background-color: var(--card-background);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .paper-card:hover {
+    border-color: var(--primary-color);
+}
+
+body.dark-mode .year-section {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+}
+
+body.dark-mode .back-to-top .btn {
+    background-color: var(--card-background);
+    border-color: var(--border-color);
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .paper-card,
+    .paper-icon,
+    .download-btn,
+    .year-section {
+        transition: none;
+    }
+    
+    .paper-card:hover {
+        transform: none;
+    }
+    
+    .paper-card:hover .paper-icon {
+        transform: none;
+    }
+    
+    .paper-card.downloading .download-btn i {
+        animation: none;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .pyq-container {
+        box-shadow: none;
+    }
+    
+    .paper-card {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+    
+    .download-btn {
+        display: none;
+    }
+}

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notemycode - HTML Notes</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><span class="highlight">Note</span>My<span class="highlight">Code</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../notes.html" class="active">Notes</a></li>
+                <li><a href="../pyq.html">PYQ</a></li>
+            </ul>
+        </nav>
+        <div class="theme-toggle">
+            <input type="checkbox" id="darkmode-toggle">
+            <label for="darkmode-toggle">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <div class="notes-container">
+            <div class="notes-header">
+                <div class="language-icon">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <h1>HTML Programming</h1>
+                <p>Comprehensive notes on HTML (HyperText Markup Language)</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>Introduction to HTML</h2>
+                <p>HTML (HyperText Markup Language) is the standard markup language used to create and design documents on the World Wide Web. It structures web content by using a system of tags and elements that define the content and layout of web pages.</p>
+                <p>Developed by Tim Berners-Lee in 1991, HTML is the backbone of every website. It is not a programming language but a markup language used to annotate text, images, and other content for display in web browsers.</p>
+                <p>HTML works alongside CSS (Cascading Style Sheets) for styling and JavaScript for interactivity, forming the core technologies of the web. Browsers read and interpret HTML files to display websites to users.</p>
+                <p>HTML documents are plain text files saved with the .html extension and consist of elements represented by tags enclosed in angle brackets (< >), such as &lt;p&gt;, &lt;h1&gt;, &lt;a&gt;, etc.</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>HTML Document Structure</h2>
+                <p>HTML documents follow a standard structure and syntax. Every HTML page starts with a DOCTYPE declaration and contains essential elements that define the document structure.</p>
+                
+                <div class="code-block">
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My First HTML Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                </div>
+                
+                <p>The DOCTYPE declaration tells the browser which version of HTML is being used, while the html element serves as the root container for all other elements on the page.</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>Common HTML Elements</h2>
+                <p>HTML provides a wide variety of elements for structuring content. Here are some of the most commonly used elements for creating web pages:</p>
+                
+                <div class="code-block">
+                    <pre>
+&lt;!-- Headings --&gt;
+&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Sub Heading&lt;/h2&gt;
+
+&lt;!-- Paragraphs and Links --&gt;
+&lt;p&gt;This is a paragraph with a &lt;a href="https://example.com"&gt;link&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!-- Images --&gt;
+&lt;img src="image.jpg" alt="Description" width="300"&gt;
+
+&lt;!-- Lists --&gt;
+&lt;ul&gt;
+    &lt;li&gt;Item One&lt;/li&gt;
+    &lt;li&gt;Item Two&lt;/li&gt;
+&lt;/ul&gt;
+                    </pre>
+                </div>
+                
+                <p>These elements form the foundation of web content, allowing you to create structured, accessible, and meaningful web pages that browsers can properly interpret and display.</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>Essential HTML Tags</h2>
+                <p>Understanding the core HTML tags is crucial for web development. Each tag serves a specific purpose in structuring and presenting web content.</p>
+                
+                <p>Here are the fundamental HTML tags every developer should know:</p>
+                <ul>
+                    <li><code>&lt;!DOCTYPE html&gt;</code>: Declares the document type and HTML version</li>
+                    <li><code>&lt;html&gt;</code>: Root element that contains all other HTML elements</li>
+                    <li><code>&lt;head&gt;</code>: Contains metadata, title, and links to external resources</li>
+                    <li><code>&lt;body&gt;</code>: Contains all visible content of the web page</li>
+                    <li><code>&lt;title&gt;</code>: Sets the title visible in the browser tab</li>
+                </ul>
+                
+                <p>These tags create the basic structure that every HTML document must have to be valid and properly rendered by web browsers.</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>HTML Forms and Input Elements</h2>
+                <p>Forms are essential for collecting user input on web pages. They allow users to submit data like login credentials, contact information, surveys, and more.</p>
+                
+                <div class="code-block">
+                    <pre>
+&lt;form action="/submit" method="post"&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name" required&gt;
+    
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required&gt;
+    
+    &lt;label for="message"&gt;Message:&lt;/label&gt;
+    &lt;textarea id="message" name="message" rows="4" cols="50"&gt;&lt;/textarea&gt;
+    
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+                    </pre>
+                </div>
+                
+                <p>Forms use various input types including text, email, password, number, date, and more. The action attribute specifies where to send the form data, while the method attribute defines how to send it (GET or POST).</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>HTML Tables</h2>
+                <p>Tables are used to display structured data in rows and columns. They're perfect for presenting information like schedules, statistics, or comparison data.</p>
+                
+                <div class="code-block">
+                    <pre>
+&lt;table border="1"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+            &lt;th&gt;Age&lt;/th&gt;
+            &lt;th&gt;City&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Alice&lt;/td&gt;
+            &lt;td&gt;25&lt;/td&gt;
+            &lt;td&gt;New York&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Bob&lt;/td&gt;
+            &lt;td&gt;30&lt;/td&gt;
+            &lt;td&gt;London&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+                    </pre>
+                </div>
+                
+                <p>Tables consist of thead (header), tbody (body), and tfoot (footer) sections. Use th for header cells and td for data cells. The border attribute adds visible borders to the table.</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>Semantic HTML5 Elements</h2>
+                <p>Semantic HTML uses elements that clearly describe their meaning to both browsers and developers. This improves accessibility, SEO, and code maintainability.</p>
+                
+                <div class="code-block">
+                    <pre>
+&lt;header&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+    &lt;section&gt;
+        &lt;article&gt;
+            &lt;h2&gt;Article Title&lt;/h2&gt;
+            &lt;p&gt;Article content goes here...&lt;/p&gt;
+        &lt;/article&gt;
+    &lt;/section&gt;
+    
+    &lt;aside&gt;
+        &lt;h3&gt;Related Links&lt;/h3&gt;
+        &lt;p&gt;Sidebar content&lt;/p&gt;
+    &lt;/aside&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;&copy; 2025 My Website&lt;/p&gt;
+&lt;/footer&gt;
+                    </pre>
+                </div>
+                
+                <p>Semantic elements like header, nav, main, section, article, aside, and footer provide clear structure and meaning to web content, making it more accessible to screen readers and search engines.</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>HTML Attributes and Accessibility</h2>
+                <p>HTML attributes provide additional information about elements and are crucial for accessibility, functionality, and styling. They appear in the opening tag of elements.</p>
+                
+                <div class="code-block">
+                    <pre>
+&lt;!-- Common attributes --&gt;
+&lt;a href="https://example.com" target="_blank" title="Visit Example"&gt;
+    External Link
+&lt;/a&gt;
+
+&lt;img src="image.jpg" alt="Descriptive text for screen readers" 
+     width="300" height="200"&gt;
+
+&lt;div class="container" id="main-content" style="color: blue;"&gt;
+    Content with multiple attributes
+&lt;/div&gt;
+
+&lt;!-- Accessibility attributes --&gt;
+&lt;button aria-label="Close dialog" onclick="closeDialog()"&gt;×&lt;/button&gt;
+&lt;input type="text" aria-describedby="help-text" required&gt;
+&lt;span id="help-text"&gt;Please enter your full name&lt;/span&gt;
+                    </pre>
+                </div>
+                
+                <p>Key attributes include href (links), src (images/media), alt (alternative text), class/id (styling/scripting), and ARIA attributes for enhanced accessibility. Always include alt text for images and proper labels for form elements.</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>HTML5 Multimedia Elements</h2>
+                <p>HTML5 introduced native support for audio and video content, eliminating the need for plugins like Flash. These elements provide built-in controls and extensive customization options.</p>
+                
+                <div class="code-block">
+                    <pre>
+&lt;!-- Video element --&gt;
+&lt;video width="400" height="300" controls poster="thumbnail.jpg"&gt;
+    &lt;source src="movie.mp4" type="video/mp4"&gt;
+    &lt;source src="movie.webm" type="video/webm"&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;
+
+&lt;!-- Audio element --&gt;
+&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+    &lt;source src="audio.ogg" type="audio/ogg"&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+
+&lt;!-- Embedded content --&gt;
+&lt;iframe src="https://www.youtube.com/embed/VIDEO_ID" 
+        width="560" height="315" frameborder="0"&gt;
+&lt;/iframe&gt;
+                    </pre>
+                </div>
+                
+                <p>Always provide multiple source formats for better browser compatibility. The controls attribute adds play/pause buttons, while the poster attribute sets a preview image for videos. Include fallback text for unsupported browsers.</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>HTML Best Practices</h2>
+                <p>Following HTML best practices ensures your code is clean, accessible, maintainable, and performs well across different browsers and devices.</p>
+                
+                <p>Essential HTML best practices include:</p>
+                <ul>
+                    <li><strong>Use semantic elements:</strong> Choose elements based on meaning, not appearance</li>
+                    <li><strong>Validate your HTML:</strong> Use W3C validator to check for errors</li>
+                    <li><strong>Include alt text:</strong> Always provide alternative text for images</li>
+                    <li><strong>Proper nesting:</strong> Ensure elements are properly opened and closed</li>
+                    <li><strong>Use lowercase:</strong> Write tag names and attributes in lowercase</li>
+                    <li><strong>Quote attributes:</strong> Always quote attribute values</li>
+                    <li><strong>Optimize images:</strong> Use appropriate formats and sizes</li>
+                    <li><strong>Mobile-first:</strong> Include viewport meta tag for responsive design</li>
+                </ul>
+                
+                <div class="code-block">
+                    <pre>
+&lt;!-- Good HTML structure --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;meta name="description" content="Page description for SEO"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header role="banner"&gt;
+        &lt;h1&gt;Site Title&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;main role="main"&gt;
+        &lt;h2&gt;Page Heading&lt;/h2&gt;
+        &lt;p&gt;Well-structured content&lt;/p&gt;
+    &lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                </div>
+                
+                <p>Clean, semantic HTML forms the foundation of accessible, SEO-friendly websites that work well across all devices and assistive technologies.</p>
+            </div>
+
+            <div class="downloads-section">
+                <h2>Downloadable Resources</h2>
+                <div class="downloads-list">
+                    <div class="download-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <a href="../assets/pdfs/html-basics-guide.pdf" download>HTML Basics Reference Guide</a>
+                    </div>
+                    <div class="download-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <a href="../assets/pdfs/html-elements-cheatsheet.pdf" download>HTML Elements Cheat Sheet</a>
+                    </div>
+                    <div class="download-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <a href="../assets/pdfs/html5-features-overview.pdf" download>HTML5 Features & Semantic Elements</a>
+                    </div>
+                    <div class="download-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <a href="../assets/pdfs/html-forms-guide.pdf" download>HTML Forms Complete Guide</a>
+                    </div>
+                    <div class="download-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <a href="../assets/pdfs/html-accessibility-checklist.pdf" download>HTML Accessibility Checklist</a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="../notes.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Notes
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 All Rights Reserved | Built by Krishna Choudhary | krishnachoudhary9424@gmail.com</p>
+    </footer>
+
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notemycode - Python Programming Notes</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><span class="highlight">Note</span>My<span class="highlight">Code</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../notes.html" class="active">Notes</a></li>
+                <li><a href="../pyq.html">PYQ</a></li>
+            </ul>
+        </nav>
+        <div class="theme-toggle">
+            <input type="checkbox" id="darkmode-toggle">
+            <label for="darkmode-toggle">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <div class="notes-container">
+            <div class="notes-header">
+                <div class="language-icon">
+                    <i class="fab fa-python"></i>
+                </div>
+                <h1>Python Programming</h1>
+                <p>Comprehensive notes on Python programming language</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>Introduction to Python</h2>
+                <p>Python is a high-level, interpreted programming language known for its readability and simplicity. Created by Guido van Rossum and first released in 1991, Python has become one of the most popular programming languages in the world due to its versatility and ease of use.</p>
+                <p>Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for both small and large-scale projects.</p>
+                <p>Unlike languages like C++ or Java, Python uses an interpreter rather than a compiler, which means code can be executed as soon as it is written, making the development process faster and more efficient. This interpreted nature makes Python an excellent choice for scripting, rapid application development, and prototyping.</p>
+                <p>Python supports multiple programming paradigms, including procedural, object-oriented, and functional programming. Its comprehensive standard library, often referred to as Python's "batteries included" philosophy, provides tools for many common programming tasks.</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>Python Basics</h2>
+                <p>Python syntax is designed to be readable and straightforward. Here are some key aspects of Python's basic syntax:</p>
+                
+                <div class="code-block">
+                    <pre>
+# This is a comment in Python
+print("Hello, World!")  # This prints a string to the console
+
+# Variables and data types
+name = "John"           # String
+age = 30                # Integer
+height = 5.9            # Float
+is_student = True       # Boolean
+
+# Lists (ordered, mutable collection)
+fruits = ["apple", "banana", "cherry"]
+fruits.append("orange")  # Adding an item
+
+# Dictionaries (key-value pairs)
+person = {
+    "name": "Alice",
+    "age": 25,
+    "city": "New York"
+}
+
+# Conditional statements
+if age > 18:
+    print("Adult")
+elif age > 12:
+    print("Teenager")
+else:
+    print("Child")
+
+# Loops
+for fruit in fruits:
+    print(fruit)
+
+counter = 0
+while counter < 5:
+    print(counter)
+    counter += 1
+
+# Functions
+def greet(name):
+    return f"Hello, {name}!"
+
+message = greet("Python learner")
+print(message)
+                    </pre>
+                </div>
+                
+                <p>Python uses indentation (whitespace at the beginning of a line) to define scope in the code. Other programming languages often use curly brackets for this purpose, but Python's use of indentation makes the code more readable and reduces syntax errors.</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>Object-Oriented Programming in Python</h2>
+                <p>Python is a multi-paradigm programming language that fully supports object-oriented programming (OOP). OOP is a programming paradigm based on the concept of "objects", which can contain data and code: data in the form of fields (attributes), and code in the form of procedures (methods).</p>
+                
+                <div class="code-block">
+                    <pre>
+# Defining a class in Python
+class Dog:
+    # Class attribute
+    species = "Canis familiaris"
+    
+    # Initializer / Constructor
+    def __init__(self, name, age):
+        self.name = name  # Instance attribute
+        self.age = age    # Instance attribute
+    
+    # Instance method
+    def description(self):
+        return f"{self.name} is {self.age} years old"
+    
+    # Another instance method
+    def speak(self, sound):
+        return f"{self.name} says {sound}"
+
+# Creating instances of the Dog class
+buddy = Dog("Buddy", 9)
+miles = Dog("Miles", 4)
+
+# Accessing instance attributes
+print(buddy.name)  # Output: Buddy
+print(miles.age)   # Output: 4
+
+# Calling instance methods
+print(buddy.description())  # Output: Buddy is 9 years old
+print(miles.speak("Woof"))  # Output: Miles says Woof
+
+# Inheritance in Python
+class JackRussellTerrier(Dog):
+    def speak(self, sound="Arf"):
+        return super().speak(sound)
+
+# Creating an instance of the child class
+jack = JackRussellTerrier("Jack", 3)
+print(jack.description())  # Output: Jack is 3 years old
+print(jack.speak())        # Output: Jack says Arf
+                    </pre>
+                </div>
+                
+                <p>Python's OOP features include encapsulation, inheritance, and polymorphism. These concepts help in creating reusable and organized code structures, making Python suitable for large-scale software development.</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>Python Libraries and Frameworks</h2>
+                <p>One of Python's greatest strengths is its extensive ecosystem of libraries and frameworks that extend its functionality for various applications:</p>
+                
+                <p><strong>Data Science and Machine Learning:</strong></p>
+                <ul>
+                    <li><code>NumPy</code>: For numerical computing with powerful array operations</li>
+                    <li><code>Pandas</code>: Data analysis and manipulation library</li>
+                    <li><code>Matplotlib</code> and <code>Seaborn</code>: Data visualization tools</li>
+                    <li><code>Scikit-learn</code>: Machine learning algorithms and tools</li>
+                    <li><code>TensorFlow</code> and <code>PyTorch</code>: Deep learning frameworks</li>
+                </ul>
+                
+                <p><strong>Web Development:</strong></p>
+                <ul>
+                    <li><code>Django</code>: Full-featured web framework with admin interface</li>
+                    <li><code>Flask</code>: Lightweight and flexible web framework</li>
+                    <li><code>FastAPI</code>: Modern web framework for building APIs</li>
+                </ul>
+                
+                <p><strong>Automation and Scripting:</strong></p>
+                <ul>
+                    <li><code>Requests</code>: HTTP library for API interactions</li>
+                    <li><code>Beautiful Soup</code>: Web scraping library</li>
+                    <li><code>Selenium</code>: Browser automation</li>
+                    <li><code>PyAutoGUI</code>: GUI automation</li>
+                </ul>
+                
+                <p>This rich ecosystem makes Python versatile for various applications, from web development and data science to automation, game development, and scientific computing.</p>
+            </div>
+
+            <div class="downloads-section">
+                <h2>Downloadable Resources</h2>
+                <div class="downloads-list">
+                    <div class="download-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <a href="../assets/pdfs/python_notes.pdf" download>Python Programming Fundamentals.pdf</a>
+                    </div>
+                    <div class="download-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <a href="../assets/pdfs/python_advanced.pdf" download>Advanced Python Techniques.pdf</a>
+                    </div>
+                    <div class="download-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <a href="../assets/pdfs/python_cheatsheet.pdf" download>Python Quick Reference Cheatsheet.pdf</a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="../notes.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Notes
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 All Rights Reserved | Built by Krishna Choudhary & Ashwin Patil| krishnachoudhary9424@gmail.com</p>
+    </footer>
+
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

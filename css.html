@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notemycode - CSS Notes</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><span class="highlight">Note</span>My<span class="highlight">Code</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../notes.html" class="active">Notes</a></li>
+                <li><a href="../pyq.html">PYQ</a></li>
+            </ul>
+        </nav>
+        <div class="theme-toggle">
+            <input type="checkbox" id="darkmode-toggle">
+            <label for="darkmode-toggle">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <div class="notes-container">
+            <div class="notes-header">
+                <div class="language-icon">
+                    <i class="fab fa-css3-alt"></i>
+                </div>
+                <h1>CSS Programming</h1>
+                <p>Master the art of styling and designing beautiful web interfaces</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>Introduction to CSS</h2>
+                <p>CSS (Cascading Style Sheets) is a stylesheet language used for describing the presentation of a document written in HTML or XML. It controls the layout, colors, fonts, and overall visual appearance of web pages.</p>
+                <p>CSS is essential for enhancing the look of web pages, creating responsive and visually attractive layouts, separating content from design, and maintaining consistency across pages.</p>
+                <p>With CSS, you can transform plain HTML into stunning, interactive web experiences. It provides the power to control every aspect of your webpage's visual presentation.</p>
+                <p>Modern CSS includes advanced features like Flexbox, Grid, animations, and responsive design capabilities that make it an indispensable tool for web developers.</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>CSS Syntax and Basic Structure</h2>
+                <p>CSS follows a simple syntax pattern consisting of selectors, properties, and values. Understanding this structure is fundamental to writing effective CSS code.</p>
+                
+                <div class="code-block">
+                    <pre>
+selector {
+  property: value;
+}
+
+/* Example */
+h1 {
+  color: red;
+  font-size: 24px;
+}
+                    </pre>
+                </div>
+                
+                <p>The selector targets HTML elements, while properties define what aspect to style, and values specify how to style it. This simple yet powerful structure allows for precise control over webpage presentation.</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>Types of CSS Implementation</h2>
+                <p>CSS can be implemented in three different ways, each with its own use cases and benefits. Choose the right method based on your project's needs and scope.</p>
+                
+                <div class="code-block">
+                    <pre>
+/* Inline CSS */
+&lt;p style="color: blue;"&gt;This is a blue paragraph.&lt;/p&gt;
+
+/* Internal CSS */
+&lt;style&gt;
+  p { color: green; }
+&lt;/style&gt;
+
+/* External CSS */
+&lt;link rel="stylesheet" href="styles.css"&gt;
+                    </pre>
+                </div>
+                
+                <p>External CSS is generally preferred for larger projects as it promotes maintainability, reusability, and separation of concerns. Inline CSS is useful for quick styling, while internal CSS works well for single-page applications.</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>CSS Selectors and Box Model</h2>
+                <p>CSS selectors are patterns used to select and style HTML elements. The box model is a fundamental concept that describes how elements are structured and spaced.</p>
+                
+                <p>Essential CSS selectors include:</p>
+                <ul>
+                    <li><code>*</code>: Universal selector that targets all elements</li>
+                    <li><code>.class-name</code>: Class selector for styling elements with specific classes</li>
+                    <li><code>#id-name</code>: ID selector for unique element identification</li>
+                    <li><code>element</code>: Element selector that targets HTML tags directly</li>
+                    <li><code>:hover</code>: Pseudo-class for interactive states and effects</li>
+                </ul>
+                
+                <div class="code-block">
+                    <pre>
+/* Box Model Example */
+div {
+  padding: 10px;     /* Space around content */
+  border: 2px solid black;  /* Border around padding */
+  margin: 20px;      /* Space outside border */
+  width: 200px;      /* Content width */
+}
+                    </pre>
+                </div>
+                
+                <p>The CSS box model consists of content, padding, border, and margin layers. Understanding this model is crucial for controlling spacing and layout in your designs.</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>Flexbox and Grid Layouts</h2>
+                <p>Modern CSS provides powerful layout systems with Flexbox and Grid. Flexbox excels at one-dimensional layouts, while Grid handles complex two-dimensional layouts.</p>
+                
+                <div class="code-block">
+                    <pre>
+/* Flexbox Layout */
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+/* CSS Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+                    </pre>
+                </div>
+                
+                <p>Flexbox properties include flex-direction (row, column), justify-content (alignment along main axis), and align-items (alignment along cross axis). Grid properties allow precise control over rows, columns, and positioning.</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>Colors, Fonts, and Visual Styling</h2>
+                <p>CSS offers extensive options for colors, typography, and visual effects. Master these fundamentals to create visually appealing designs.</p>
+                
+                <div class="code-block">
+                    <pre>
+/* Color Formats */
+.color-examples {
+  color: red;                    /* Named color */
+  background-color: #ff0000;     /* Hex color */
+  border-color: rgb(255, 0, 0);  /* RGB color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* RGBA */
+}
+
+/* Font Styling */
+.typography {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.6;
+  text-align: center;
+}
+                    </pre>
+                </div>
+                
+                <p>Import Google Fonts using @import or link tags. Use web-safe fonts as fallbacks. Consider readability, accessibility, and brand consistency when choosing typography.</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>Responsive Design and Media Queries</h2>
+                <p>Create websites that adapt to different screen sizes using responsive design principles and media queries for optimal user experience across devices.</p>
+                
+                <div class="code-block">
+                    <pre>
+/* Mobile-First Approach */
+.responsive-element {
+  width: 100%;
+  padding: 10px;
+}
+
+/* Tablet and Desktop Styles */
+@media screen and (min-width: 768px) {
+  .responsive-element {
+    width: 50%;
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .responsive-element {
+    width: 33.33%;
+    padding: 30px;
+  }
+}
+                    </pre>
+                </div>
+                
+                <p>Use breakpoints at 768px (tablet), 1024px (desktop), and 1200px (large screens). Design mobile-first for better performance and progressive enhancement.</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>Animations and Transitions</h2>
+                <p>Add life to your designs with CSS animations and transitions. Create smooth, engaging user interactions without JavaScript.</p>
+                
+                <div class="code-block">
+                    <pre>
+/* CSS Transitions */
+.smooth-transition {
+  transition: all 0.3s ease-in-out;
+}
+
+.smooth-transition:hover {
+  transform: scale(1.1);
+  background-color: #3498db;
+}
+
+/* CSS Animations */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animated-element {
+  animation: slideIn 0.5s ease-out;
+}
+                    </pre>
+                </div>
+                
+                <p>Use transitions for hover effects and state changes. Keyframe animations provide complex motion effects. Keep animations subtle and purposeful for better user experience.</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>CSS Variables and Modern Features</h2>
+                <p>CSS custom properties (variables) and modern features like calc(), clamp(), and CSS Grid make styling more maintainable and powerful.</p>
+                
+                <div class="code-block">
+                    <pre>
+/* CSS Variables */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --font-size-large: 24px;
+  --spacing-unit: 16px;
+}
+
+.modern-styling {
+  color: var(--primary-color);
+  font-size: var(--font-size-large);
+  padding: calc(var(--spacing-unit) * 2);
+  width: clamp(300px, 50vw, 800px);
+}
+
+/* Advanced Selectors */
+.parent:has(.child) {
+  background-color: lightblue;
+}
+
+.item:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+                    </pre>
+                </div>
+                
+                <p>CSS variables enable theming and consistent design systems. Modern functions like calc(), min(), max(), and clamp() provide dynamic sizing. Advanced selectors like :has() and :nth-child() offer precise targeting.</p>
+            </div>
+
+            <div class="downloads-section">
+                <h2>Downloadable Resources</h2>
+                <div class="downloads-list">
+                    <div class="download-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <a href="../assets/pdfs/css-selectors-guide.pdf" download>CSS Selectors Reference Guide</a>
+                    </div>
+                    <div class="download-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <a href="../assets/pdfs/css-flexbox-cheatsheet.pdf" download>Flexbox and Grid Layout Cheatsheet</a>
+                    </div>
+                    <div class="download-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <a href="../assets/pdfs/css-responsive-design.pdf" download>Responsive Design Best Practices</a>
+                    </div>
+                    <div class="download-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <a href="../assets/pdfs/css-animations-guide.pdf" download>CSS Animations and Transitions Guide</a>
+                    </div>
+                    <div class="download-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <a href="../assets/pdfs/css-variables-modern-features.pdf" download>CSS Variables and Modern Features</a>
+                    </div>
+                    <div class="download-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <a href="../assets/pdfs/css-best-practices.pdf" download>CSS Best Practices and Optimization</a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="../notes.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Notes
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 All Rights Reserved | Built by Krishna Choudhary | krishnachoudhary9424@gmail.com</p>
+    </footer>
+
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

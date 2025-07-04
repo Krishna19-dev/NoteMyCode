@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notemycode - DSA Notes</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><span class="highlight">Note</span>My<span class="highlight">Code</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../notes.html" class="active">Notes</a></li>
+                
+                <li><a href="../pyq.html">PYQ</a></li>
+                
+            </ul>
+        </nav>
+        <div class="theme-toggle">
+            <input type="checkbox" id="darkmode-toggle">
+            <label for="darkmode-toggle">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <div class="notes-container">
+            <div class="notes-header">
+                <div class="language-icon">
+                    <i class="fas fa-code-branch"></i>
+                </div>
+                <h1>Data Structures and Algorithms</h1>
+                <p>Comprehensive notes on Data Structures and Algorithms (DSA)</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>Introduction to DSA</h2>
+                <p>Data Structures and Algorithms (DSA) are the foundation of efficient programming and problem-solving. A <strong>data structure</strong> is a way to store and organize data, while an <strong>algorithm</strong> is a set of rules or steps to solve a specific problem. Together, they help in writing optimized, scalable, and performant code.</p>
+                <p>DSA is crucial for writing clean and efficient code, cracking coding interviews at top tech companies, solving real-world problems, competitive programming, and building scalable software systems.</p>
+                <p>Languages like C++, Java, and Python are commonly used to implement DSA concepts. Understanding these fundamentals is essential for any programmer looking to excel in software development.</p>
+                <p>Mastering DSA develops logical thinking, problem-solving abilities, and coding efficiency, making it an indispensable skill for modern software engineers.</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>Linear Data Structures</h2>
+                <p>Linear data structures organize data in a sequential manner where elements are arranged in a linear order. Each element has a unique predecessor and successor (except the first and last elements).</p>
+                
+                <div class="code-block">
+                    <pre>
+// Array - Fixed size, indexed access
+int arr[5] = {1, 2, 3, 4, 5};
+// Time Complexities: Access O(1), Search O(n), Insert/Delete O(n)
+
+// Linked List - Dynamic size
+struct Node {
+    int data;
+    Node* next;
+};
+
+// Stack - LIFO (Last In First Out)
+stack&lt;int&gt; st;
+st.push(10);    // Insert element
+st.pop();       // Remove top element
+int top = st.top();  // Access top element
+
+// Queue - FIFO (First In First Out)
+queue&lt;int&gt; q;
+q.push(10);     // Enqueue
+q.pop();        // Dequeue
+int front = q.front();  // Access front element
+                    </pre>
+                </div>
+                
+                <p>These linear structures are fundamental building blocks used in various applications like expression evaluation, backtracking algorithms, and breadth-first search implementations.</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>Non-Linear Data Structures</h2>
+                <p>Non-linear data structures don't arrange data sequentially. Instead, they organize data in hierarchical or network-like structures, allowing for more complex relationships between elements.</p>
+                
+                <div class="code-block">
+                    <pre>
+// Binary Tree Node Structure
+struct TreeNode {
+    int data;
+    TreeNode* left;
+    TreeNode* right;
+};
+
+// Binary Search Tree Operations
+class BST {
+public:
+    TreeNode* insert(TreeNode* root, int key) {
+        if (root == nullptr) 
+            return new TreeNode(key);
+        
+        if (key &lt; root-&gt;data)
+            root-&gt;left = insert(root-&gt;left, key);
+        else if (key &gt; root-&gt;data)
+            root-&gt;right = insert(root-&gt;right, key);
+            
+        return root;
+    }
+};
+
+// Graph Representation using Adjacency List
+vector&lt;vector&lt;int&gt;&gt; adj(n);  // n vertices
+adj[u].push_back(v);  // Add edge from u to v
+                    </pre>
+                </div>
+                
+                <p>Trees provide hierarchical organization perfect for searching and sorting operations, while graphs model complex relationships in networks, social connections, and routing algorithms.</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>Essential Algorithms</h2>
+                <p>Algorithms are systematic approaches to solving computational problems. Understanding different algorithmic paradigms helps in choosing the most efficient solution for specific problems.</p>
+                
+                <p>Here are the fundamental algorithmic techniques every programmer should master:</p>
+                <ul>
+                    <li><code>Searching</code>: Linear Search O(n), Binary Search O(log n)</li>
+                    <li><code>Sorting</code>: Bubble Sort O(n²), Merge Sort O(n log n), Quick Sort O(n log n)</li>
+                    <li><code>Recursion</code>: Base case and recursive case, useful for tree traversals</li>
+                    <li><code>Dynamic Programming</code>: Optimal substructure and overlapping subproblems</li>
+                    <li><code>Greedy Algorithms</code>: Make locally optimal choices for global optimization</li>
+                </ul>
+                
+                <p>Each algorithmic paradigm has specific use cases and trade-offs in terms of time and space complexity, making algorithm selection crucial for optimal performance.</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>Time and Space Complexity</h2>
+                <p>Complexity analysis helps evaluate algorithm efficiency and scalability. Understanding Big O notation is crucial for comparing different algorithmic approaches.</p>
+                
+                <div class="code-block">
+                    <pre>
+// Time Complexity Examples
+
+// O(1) - Constant Time
+int getFirstElement(vector&lt;int&gt;&amp; arr) {
+    return arr[0];
+}
+
+// O(n) - Linear Time
+int linearSearch(vector&lt;int&gt;&amp; arr, int target) {
+    for (int i = 0; i &lt; arr.size(); i++) {
+        if (arr[i] == target) return i;
+    }
+    return -1;
+}
+
+// O(log n) - Logarithmic Time
+int binarySearch(vector&lt;int&gt;&amp; arr, int target) {
+    int left = 0, right = arr.size() - 1;
+    while (left &lt;= right) {
+        int mid = left + (right - left) / 2;
+        if (arr[mid] == target) return mid;
+        else if (arr[mid] &lt; target) left = mid + 1;
+        else right = mid - 1;
+    }
+    return -1;
+}
+
+// O(n²) - Quadratic Time
+void bubbleSort(vector&lt;int&gt;&amp; arr) {
+    int n = arr.size();
+    for (int i = 0; i &lt; n-1; i++) {
+        for (int j = 0; j &lt; n-i-1; j++) {
+            if (arr[j] &gt; arr[j+1]) {
+                swap(arr[j], arr[j+1]);
+            }
+        }
+    }
+}
+                    </pre>
+                </div>
+                
+                <p>Common complexities include O(1), O(log n), O(n), O(n log n), O(n²), and O(2ⁿ). Space complexity measures additional memory usage beyond input size.</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>Advanced DSA Concepts</h2>
+                <p>Advanced data structures and algorithms are essential for solving complex computational problems efficiently. These concepts are frequently tested in technical interviews and competitive programming.</p>
+                
+                <div class="code-block">
+                    <pre>
+// Trie (Prefix Tree) for String Operations
+class TrieNode {
+public:
+    TrieNode* children[26];
+    bool isEndOfWord;
+    
+    TrieNode() {
+        isEndOfWord = false;
+        for (int i = 0; i &lt; 26; i++) {
+            children[i] = nullptr;
+        }
+    }
+};
+
+// Dijkstra's Algorithm for Shortest Path
+vector&lt;int&gt; dijkstra(int src, vector&lt;vector&lt;pair&lt;int,int&gt;&gt;&gt;&amp; adj) {
+    int n = adj.size();
+    vector&lt;int&gt; dist(n, INT_MAX);
+    priority_queue&lt;pair&lt;int,int&gt;, vector&lt;pair&lt;int,int&gt;&gt;, greater&gt; pq;
+    
+    dist[src] = 0;
+    pq.push({0, src});
+    
+    while (!pq.empty()) {
+        int u = pq.top().second;
+        pq.pop();
+        
+        for (auto&amp; edge : adj[u]) {
+            int v = edge.first;
+            int weight = edge.second;
+            
+            if (dist[u] + weight &lt; dist[v]) {
+                dist[v] = dist[u] + weight;
+                pq.push({dist[v], v});
+            }
+        }
+    }
+    return dist;
+}
+
+// Dynamic Programming - 0/1 Knapsack
+int knapsack(int W, vector&lt;int&gt;&amp; weights, vector&lt;int&gt;&amp; values, int n) {
+    vector&lt;vector&lt;int&gt;&gt; dp(n+1, vector&lt;int&gt;(W+1, 0));
+    
+    for (int i = 1; i &lt;= n; i++) {
+        for (int w = 1; w &lt;= W; w++) {
+            if (weights[i-1] &lt;= w) {
+                dp[i][w] = max(dp[i-1][w], 
+                              dp[i-1][w-weights[i-1]] + values[i-1]);
+            } else {
+                dp[i][w] = dp[i-1][w];
+            }
+        }
+    }
+    return dp[n][W];
+}
+                    </pre>
+                </div>
+                
+                <p>Advanced concepts include graph algorithms (BFS, DFS, Dijkstra, Floyd-Warshall), tree algorithms (AVL, Red-Black trees), dynamic programming patterns, and string algorithms like KMP and Z-algorithm.</p>
+            </div>
+
+            <div class="notes-section">
+                <h2>Problem Solving Patterns</h2>
+                <p>Recognizing common problem-solving patterns is key to efficiently tackling coding challenges. These patterns provide structured approaches to different types of computational problems.</p>
+                
+                <div class="code-block">
+                    <pre>
+// Two Pointer Technique
+vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; nums, int target) {
+    int left = 0, right = nums.size() - 1;
+    while (left &lt; right) {
+        int sum = nums[left] + nums[right];
+        if (sum == target) return {left, right};
+        else if (sum &lt; target) left++;
+        else right--;
+    }
+    return {};
+}
+
+// Sliding Window Technique
+int maxSubArraySum(vector&lt;int&gt;&amp; arr, int k) {
+    int maxSum = 0, windowSum = 0;
+    
+    // Calculate sum of first window
+    for (int i = 0; i &lt; k; i++) {
+        windowSum += arr[i];
+    }
+    maxSum = windowSum;
+    
+    // Slide the window
+    for (int i = k; i &lt; arr.size(); i++) {
+        windowSum = windowSum - arr[i-k] + arr[i];
+        maxSum = max(maxSum, windowSum);
+    }
+    return maxSum;
+}
+
+// Backtracking - N-Queens Problem
+void solveNQueens(int n, int row, vector&lt;string&gt;&amp; board, 
+                  vector&lt;vector&lt;string&gt;&gt;&amp; solutions) {
+    if (row == n) {
+        solutions.push_back(board);
+        return;
+    }
+    
+    for (int col = 0; col &lt; n; col++) {
+        if (isSafe(board, row, col)) {
+            board[row][col] = 'Q';
+            solveNQueens(n, row + 1, board, solutions);
+            board[row][col] = '.';  // Backtrack
+        }
+    }
+}
+                    </pre>
+                </div>
+                
+                <p>Key patterns include Two Pointers, Sliding Window, Divide and Conquer, Greedy approach, Dynamic Programming, Backtracking, and Bit Manipulation. Mastering these patterns accelerates problem-solving in interviews and competitions.</p>
+            </div>
+
+            <div class="downloads-section">
+                <h2>Downloadable Resources</h2>
+                <div class="downloads-list">
+                    <div class="download-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <a href="../assets/pdfs/dsa-fundamentals-guide.pdf" download>DSA Fundamentals Guide</a>
+                    </div>
+                    <div class="download-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <a href="../assets/pdfs/algorithms-cheatsheet.pdf" download>Algorithms Cheat Sheet</a>
+                    </div>
+                    <div class="download-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <a href="../assets/pdfs/complexity-analysis-guide.pdf" download>Time & Space Complexity Guide</a>
+                    </div>
+                    <div class="download-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <a href="../assets/pdfs/interview-problems-collection.pdf" download>DSA Interview Problems Collection</a>
+                    </div>
+                    <div class="download-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <a href="../assets/pdfs/competitive-programming-handbook.pdf" download>Competitive Programming Handbook</a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="../notes.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Notes
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 All Rights Reserved | Built by Krishna Choudhary | krishnachoudhary9424@gmail.com</p>
+    </footer>
+
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

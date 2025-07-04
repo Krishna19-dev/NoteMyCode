@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notemycode - Programming Learning Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><span class="highlight">Note</span>My<span class="highlight">Code</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="notes.html">Notes</a></li>
+               
+                <li><a href="pyq.html">PYQ</a></li>
+            </ul>
+        </nav>
+        <div class="theme-toggle">
+            <input type="checkbox" id="darkmode-toggle">
+            <label for="darkmode-toggle">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Welcome to Notemycode</h2>
+                <p>Your one-stop resource for programming language notes</p>
+                <a href="notes.html" class="btn">Explore Notes</a>
+            </div>
+            <div class="hero-image">
+                <div class="code-snippet">
+                    <pre><code>
+function learnToCode() {
+    const languages = [
+        'C', 'Python', 'Java', 
+        'HTML', 'CSS', 'DSA'
+    ];
+    
+    return languages.map(lang => 
+        `Learn ${lang} with Notemycode!`);
+}
+                    </code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Why Choose Notemycode?</h2>
+            <div class="feature-cards">
+                <div class="card">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Comprehensive Notes</h3>
+                    <p>Well-structured notes covering all major programming concepts and languages.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-code"></i>
+                    <h3>Code Examples</h3>
+                    <p>Learn through practical examples and code snippets that illustrate key concepts.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-download"></i>
+                    <h3>Downloadable Resources</h3>
+                    <p>Download PDF notes for offline study and reference.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="language-preview">
+            <h2>Programming Languages</h2>
+            <div class="lang-container">
+                <div class="lang-card">
+                    <i class="fas fa-c"></i>
+                    <h3>C</h3>
+                </div>
+                <div class="lang-card">
+                    <i class="fab fa-python"></i>
+                    <h3>Python</h3>
+                </div>
+                <div class="lang-card">
+                    <i class="fab fa-java"></i>
+                    <h3>Java</h3>
+                </div>
+                <div class="lang-card">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML</h3>
+                </div>
+                <div class="lang-card">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS</h3>
+                </div>
+                <div class="lang-card">
+                    <i class="fas fa-sitemap"></i>
+                    <h3>DSA</h3>
+                    
+                </div>
+            </div>
+            <div class="cta-container">
+                <a href="notes.html" class="btn btn-large">View All Notes</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 All Rights Reserved | Built by Krishna Choudhary & Ashwin Patil | krishnachoudhary9424@gmail.com</p>
+    </footer>
+
+    <script src="js/darkmode.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
